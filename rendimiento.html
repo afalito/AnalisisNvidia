@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendimiento Histórico - Análisis de NVIDIA</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .chart-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .chart-container img {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .metric-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .metric-card .value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 10px 0;
+        }
+        
+        .trend-up {
+            color: #4caf50;
+        }
+        
+        .trend-down {
+            color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/nvidia-logo.png" alt="NVIDIA Logo" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Nvidia_logo.svg/1280px-Nvidia_logo.svg.png'; this.onerror=null;">
+                <h1>Análisis de Inversión</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="rendimiento.html" class="active">Rendimiento</a></li>
+                    <li><a href="tecnico.html">Análisis Técnico</a></li>
+                    <li><a href="fundamental.html">Análisis Fundamental</a></li>
+                    <li><a href="industria.html">Industria</a></li>
+                    <li><a href="riesgos.html">Riesgos y Oportunidades</a></li>
+                    <li><a href="recomendacion.html">Recomendación</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Rendimiento Histórico</h2>
+            <p>Análisis de la evolución del precio, rendimientos y volatilidad de NVIDIA a lo largo del tiempo.</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>Rendimiento Último Año</h3>
+                    <div class="value trend-up">+125.9%</div>
+                    <p>Crecimiento excepcional impulsado por la demanda de IA</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Rendimiento 5 Años</h3>
+                    <div class="value trend-up">+581.5%</div>
+                    <p>Crecimiento compuesto anual superior al 45%</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Volatilidad Actual</h3>
+                    <div class="value">3.2%</div>
+                    <p>Superior a la media del mercado</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Distancia Máximo Histórico</h3>
+                    <div class="value trend-down">-7.4%</div>
+                    <p>Ligera corrección desde máximos recientes</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Evolución Histórica del Precio</h3>
+                <img src="images/precio_historico.png" alt="Evolución histórica del precio de NVIDIA">
+                <p>El gráfico muestra la evolución del precio de cierre de NVIDIA junto con las medias móviles de 50 y 200 días. Se observa una clara tendencia alcista a largo plazo, con periodos de consolidación seguidos de fuertes movimientos al alza.</p>
+            </div>
+
+            <div class="chart-container">
+                <h3>Rendimiento Anual</h3>
+                <img src="images/rendimiento_anual.png" alt="Rendimiento anual de NVIDIA">
+                <p>El gráfico muestra el rendimiento anual de NVIDIA (media móvil de 7 días). Los periodos por encima de la línea roja representan rendimientos positivos en términos anuales. Se observa una tendencia de rendimientos positivos sostenidos en los últimos periodos.</p>
+            </div>
+
+            <div class="chart-container">
+                <h3>Volatilidad</h3>
+                <img src="images/volatilidad.png" alt="Volatilidad de NVIDIA">
+                <p>El gráfico muestra la volatilidad de NVIDIA calculada como la desviación estándar de los rendimientos diarios en una ventana móvil de 30 días. Se observan picos de volatilidad coincidiendo con eventos significativos del mercado y de la empresa.</p>
+            </div>
+
+            <div class="analysis-summary">
+                <h3>Conclusiones del Análisis Histórico</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> NVIDIA ha mostrado un rendimiento excepcional en los últimos años, superando significativamente al mercado general y a su sector.</li>
+                    <li><i class="fas fa-check-circle"></i> La tendencia a largo plazo es claramente alcista, con el precio actual muy por encima de las medias móviles de 50 y 200 días.</li>
+                    <li><i class="fas fa-check-circle"></i> La volatilidad ha sido elevada pero justificada por los fuertes movimientos alcistas.</li>
+                    <li><i class="fas fa-check-circle"></i> El precio actual se encuentra cerca de máximos históricos, lo que refleja las expectativas positivas del mercado.</li>
+                    <li><i class="fas fa-exclamation-triangle"></i> La valoración actual incorpora expectativas muy optimistas, lo que podría limitar el potencial de revalorización a corto plazo.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>¿Quieres conocer más detalles?</h2>
+            <p>Continúa con nuestro análisis técnico para evaluar indicadores y señales de trading</p>
+            <a href="tecnico.html" class="btn">Ver Análisis Técnico</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Análisis de NVIDIA. Este análisis ha sido preparado con fines informativos y no constituye asesoramiento financiero.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

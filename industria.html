@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de la Industria - Análisis de NVIDIA</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .industry-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background-color: var(--light-bg);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 10px 0;
+        }
+        
+        .market-segments {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .segment {
+            flex: 1;
+            min-width: 250px;
+            background-color: var(--light-bg);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .segment h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .growth-chart {
+            width: 100%;
+            height: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        
+        .growth-bar {
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 10px;
+        }
+        
+        .quote {
+            background-color: var(--light-bg);
+            border-left: 5px solid var(--primary-color);
+            padding: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .quote-source {
+            font-weight: bold;
+            text-align: right;
+            margin-top: 10px;
+        }
+        
+        .market-position {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .position-card {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .position-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--light-gray);
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/nvidia-logo.png" alt="NVIDIA Logo" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Nvidia_logo.svg/1280px-Nvidia_logo.svg.png'; this.onerror=null;">
+                <h1>Análisis de Inversión</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="rendimiento.html">Rendimiento</a></li>
+                    <li><a href="tecnico.html">Análisis Técnico</a></li>
+                    <li><a href="fundamental.html">Análisis Fundamental</a></li>
+                    <li><a href="industria.html" class="active">Industria</a></li>
+                    <li><a href="riesgos.html">Riesgos y Oportunidades</a></li>
+                    <li><a href="recomendacion.html">Recomendación</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Análisis de la Industria</h2>
+            <p>Tendencias del mercado de semiconductores y posicionamiento de NVIDIA en el sector.</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="industry-section">
+                <h3>Tendencias del Mercado de Semiconductores</h3>
+                <p>El mercado global de semiconductores está experimentando un crecimiento significativo, impulsado principalmente por la demanda de infraestructura para inteligencia artificial. Según Deloitte, se proyecta que el mercado alcanzará los $697 mil millones en 2025, un aumento sustancial desde los $627 mil millones en 2024.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h4>Tamaño del Mercado 2025</h4>
+                        <div class="value">$697B</div>
+                        <p>Proyección para el mercado global de semiconductores</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Crecimiento Anual</h4>
+                        <div class="value">9.5%</div>
+                        <p>Tasa de crecimiento proyectada para 2025</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Segmento de IA</h4>
+                        <div class="value">$150B+</div>
+                        <p>Valor proyectado del mercado de chips para IA en 2025</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Cuota de NVIDIA en GPUs para IA</h4>
+                        <div class="value">80%+</div>
+                        <p>Dominio en el mercado de aceleradores para centros de datos</p>
+                    </div>
+                </div>
+                
+                <p>La industria de semiconductores está experimentando una transformación fundamental debido a la creciente demanda de chips especializados para IA. Se estima que el segmento de chips para IA representará más de $150 mil millones en 2025, aproximadamente el 21.5% del mercado total de semiconductores.</p>
+                
+                <div class="quote">
+                    <p>"Chip sales are set to soar in 2025, led by generative AI and data center build-outs, even as demand from PC and mobile markets may remain muted."</p>
+                    <div class="quote-source">- Deloitte Semiconductor Industry Outlook 2025</div>
+                </div>
+            </div>
+            
+            <div class="industry-section">
+                <h3>Segmentación del Mercado</h3>
+                <p>El mercado de semiconductores para 2025 muestra una clara división entre segmentos de alto crecimiento relacionados con IA y segmentos tradicionales con crecimiento más moderado:</p>
+                
+                <div class="market-segments">
+                    <div class="segment">
+                        <h4>Chips para IA y Centros de Datos</h4>
+                        <div class="growth-chart">
+                            <div class="growth-bar" style="width: 90%;"></div>
+                        </div>
+                        <p>Crecimiento proyectado: <strong>30%+</strong></p>
+                        <p>Impulsado por la demanda de infraestructura para IA generativa y expansión de centros de datos.</p>
+                    </div>
+                    <div class="segment">
+                        <h4>GPUs para Gaming</h4>
+                        <div class="growth-chart">
+                            <div class="growth-bar" style="width: 50%;"></div>
+                        </div>
+                        <p>Crecimiento proyectado: <strong>8-10%</strong></p>
+                        <p>Recuperación moderada tras la normalización post-pandemia y ciclos de actualización.</p>
+                    </div>
+                    <div class="segment">
+                        <h4>Chips para Automoción</h4>
+                        <div class="growth-chart">
+                            <div class="growth-bar" style="width: 70%;"></div>
+                        </div>
+                        <p>Crecimiento proyectado: <strong>15-20%</strong></p>
+                        <p>Impulsado por vehículos eléctricos, sistemas ADAS y conducción autónoma.</p>
+                    </div>
+                    <div class="segment">
+                        <h4>Chips para PC y Móviles</h4>
+                        <div class="growth-chart">
+                            <div class="growth-bar" style="width: 30%;"></div>
+                        </div>
+                        <p>Crecimiento proyectado: <strong>3-5%</strong></p>
+                        <p>Crecimiento moderado tras varios años de debilidad en la demanda de consumo.</p>
+                    </div>
+                </div>
+                
+                <p>Esta bifurcación del mercado está creando lo que algunos analistas llaman "un mercado de dos velocidades", donde las empresas centradas en IA (como NVIDIA) muestran un rendimiento significativamente superior a aquellas más dependientes de segmentos tradicionales.</p>
+            </div>
+            
+            <div class="industry-section">
+                <h3>Posición Competitiva de NVIDIA</h3>
+                
+                <div class="market-position">
+                    <div class="position-card">
+                        <h3>Fortalezas de NVIDIA</h3>
+                        <ul>
+                            <li><strong>Dominio en GPUs para IA:</strong> Cuota de mercado superior al 80% en aceleradores para centros de datos.</li>
+                            <li><strong>Ecosistema CUDA:</strong> Plataforma de software que crea altos costos de cambio para los desarrolladores.</li>
+                            <li><strong>Arquitectura Blackwell:</strong> Nueva generación de GPUs con rendimiento y eficiencia energética superiores.</li>
+                            <li><strong>Project Digits:</strong> Supercomputadora personal de IA programada para lanzamiento en mayo de 2025.</li>
+                            <li><strong>Relaciones con clientes clave:</strong> Alianzas estratégicas con los principales proveedores de servicios en la nube y empresas de IA.</li>
+                        </ul>
+                    </div>
+                    <div class="position-card">
+                        <h3>Competidores Principales</h3>
+                        <ul>
+                            <li><strong>AMD:</strong> Competidor directo en GPUs, aunque con menor presencia en el segmento de IA.</li>
+                            <li><strong>Intel:</strong> Entrando en el mercado de GPUs discretas y desarrollando aceleradores de IA.</li>
+                            <li><strong>Google (TPUs):</strong> Desarrolla sus propios Tensor Processing Units para uso interno en sus servicios cloud.</li>
+                            <li><strong>AWS (Trainium/Inferentia):</strong> Chips personalizados para entrenamiento e inferencia de IA en su plataforma cloud.</li>
+                            <li><strong>Microsoft (Azure Maia):</strong> Desarrollando chips de IA personalizados para su infraestructura cloud.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p>A pesar de la creciente competencia, NVIDIA mantiene ventajas competitivas significativas que le permiten conservar su posición dominante en el mercado de GPUs para IA. Su ecosistema de software CUDA, su capacidad de innovación y sus relaciones estratégicas con clientes clave representan barreras de entrada sustanciales para los competidores.</p>
+            </div>
+            
+            <div class="industry-section">
+                <h3>Factores Macroeconómicos y Geopolíticos</h3>
+                
+                <p>El sector de semiconductores enfrenta desafíos geopolíticos significativos que están reconfigurando la industria:</p>
+                
+                <ul>
+                    <li><strong>Restricciones comerciales:</strong> Limitaciones a la exportación de tecnología avanzada a China, que afectan el acceso de NVIDIA a uno de los mercados más grandes del mundo.</li>
+                    <li><strong>Cadenas de suministro:</strong> Esfuerzos globales para diversificar la producción de semiconductores, con iniciativas de "reshoring" y "friendshoring" en Estados Unidos, Europa y Asia.</li>
+                    <li><strong>Políticas gubernamentales:</strong> Iniciativas como el CHIPS Act en EE.UU. y programas similares en Europa y Asia que buscan fortalecer la capacidad de fabricación local.</li>
+                    <li><strong>Tensiones geopolíticas:</strong> Conflictos en curso que pueden afectar el comercio global y las cadenas de suministro de materiales críticos.</li>
+                </ul>
+                
+                <p>Estos factores están reconfigurando la industria, con implicaciones tanto positivas como negativas para NVIDIA. Por un lado, las restricciones comerciales pueden limitar su acceso a ciertos mercados; por otro, las inversiones gubernamentales en infraestructura de IA pueden impulsar la demanda de sus productos.</p>
+            </div>
+            
+            <div class="industry-section">
+                <h3>Perspectivas de Crecimiento</h3>
+                
+                <p>Las perspectivas para el mercado de semiconductores, especialmente en el segmento de IA, son excepcionalmente positivas:</p>
+                
+                <ul>
+                    <li>Se proyecta que el mercado de aceleradores de IA alcanzará los $500 mil millones para 2028, según estimaciones de AMD.</li>
+                    <li>La demanda de infraestructura para IA generativa continúa superando las expectativas, con empresas de todos los sectores invirtiendo en capacidades de IA.</li>
+                    <li>Nuevos casos de uso en sectores como automoción, edge computing y metaverso están emergiendo, ampliando el mercado potencial para las soluciones de NVIDIA.</li>
+                    <li>La arquitectura Blackwell de NVIDIA y su Project Digits (supercomputadora personal de IA) representan nuevos vectores de crecimiento para la empresa.</li>
+                </ul>
+                
+                <p>NVIDIA está excepcionalmente bien posicionada para capitalizar estas tendencias, con su liderazgo tecnológico, su ecosistema de software y su capacidad para innovar en nuevos mercados.</p>
+                
+                <div class="quote">
+                    <p>"NVIDIA (NASDAQ: NVDA) stock is heading higher in 2025 because of the persistent and unmet demand for its cutting-edge data center and AI accelerators."</p>
+                    <div class="quote-source">- Entrepreneur.com, "Top 5 Semiconductor Stocks to Watch for 2025"</div>
+                </div>
+            </div>
+            
+            <div class="conclusion-box">
+                <h3>Conclusión del Análisis de la Industria</h3>
+                <p>El análisis de la industria de semiconductores revela un entorno excepcionalmente favorable para NVIDIA:</p>
+                <ul>
+                    <li>El mercado global de semiconductores está proyectado para crecer a $697 mil millones en 2025, con el segmento de IA representando más de $150 mil millones.</li>
+                    <li>NVIDIA mantiene una posición dominante en el mercado de GPUs para IA, con ventajas competitivas sostenibles como su ecosistema CUDA y su capacidad de innovación.</li>
+                    <li>A pesar de la creciente competencia, las barreras de entrada creadas por NVIDIA le permiten mantener su liderazgo en el mercado.</li>
+                    <li>Los factores geopolíticos presentan tanto desafíos como oportunidades, pero el impulso general de la industria hacia la IA favorece a NVIDIA.</li>
+                </ul>
+                <p>En este contexto, NVIDIA está excepcionalmente bien posicionada para capitalizar el crecimiento del mercado de semiconductores para IA, manteniendo su ventaja competitiva y expandiéndose a nuevos segmentos de mercado.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>¿Quieres conocer los riesgos y oportunidades?</h2>
+            <p>Continúa con nuestro análisis de riesgos y oportunidades para una evaluación completa</p>
+            <a href="riesgos.html" class="btn">Ver Riesgos y Oportunidades</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Análisis de NVIDIA. Este análisis ha sido preparado con fines informativos y no constituye asesoramiento financiero.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

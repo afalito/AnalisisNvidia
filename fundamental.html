@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Fundamental - Análisis de NVIDIA</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .chart-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .chart-container img {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .financials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .financial-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .financial-card .value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 10px 0;
+        }
+        
+        .advantages-list {
+            margin: 30px 0;
+        }
+        
+        .advantage-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .advantage-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .competitors-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .competitors-table th, .competitors-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .competitors-table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .competitors-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .valuation-section {
+            background-color: var(--light-bg);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/nvidia-logo.png" alt="NVIDIA Logo" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Nvidia_logo.svg/1280px-Nvidia_logo.svg.png'; this.onerror=null;">
+                <h1>Análisis de Inversión</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="rendimiento.html">Rendimiento</a></li>
+                    <li><a href="tecnico.html">Análisis Técnico</a></li>
+                    <li><a href="fundamental.html" class="active">Análisis Fundamental</a></li>
+                    <li><a href="industria.html">Industria</a></li>
+                    <li><a href="riesgos.html">Riesgos y Oportunidades</a></li>
+                    <li><a href="recomendacion.html">Recomendación</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Análisis Fundamental</h2>
+            <p>Estudio de los fundamentos financieros, ventajas competitivas y valoración de NVIDIA.</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="company-profile">
+                <h3>Perfil de la Empresa</h3>
+                <p>NVIDIA Corporation es una empresa tecnológica multinacional estadounidense que diseña unidades de procesamiento gráfico (GPUs) para los mercados de gaming y profesional, así como unidades de sistema en chip (SoCs) para el mercado móvil y automotriz. La empresa se ha transformado de ser principalmente un proveedor de GPUs para gaming a convertirse en una plataforma de computación acelerada y empresa de inteligencia artificial.</p>
+                <p>NVIDIA ha expandido significativamente su enfoque hacia la inteligencia artificial, el aprendizaje profundo, la computación de alto rendimiento y los centros de datos, posicionándose como líder en la infraestructura tecnológica que impulsa la revolución de la IA.</p>
+            </div>
+
+            <div class="financials-grid">
+                <div class="financial-card">
+                    <h3>Ingresos (TTM)</h3>
+                    <div class="value">$60.9B</div>
+                    <p>Crecimiento anual: +125.9%</p>
+                </div>
+                <div class="financial-card">
+                    <h3>Beneficio Neto (TTM)</h3>
+                    <div class="value">$29.8B</div>
+                    <p>Crecimiento anual: +581.5%</p>
+                </div>
+                <div class="financial-card">
+                    <h3>Margen de Beneficio</h3>
+                    <div class="value">48.9%</div>
+                    <p>Muy superior a la media del sector</p>
+                </div>
+                <div class="financial-card">
+                    <h3>Flujo de Caja Libre (TTM)</h3>
+                    <div class="value">$27.5B</div>
+                    <p>Generación de efectivo excepcional</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Crecimiento Financiero</h3>
+                <img src="images/crecimiento_financiero.png" alt="Crecimiento financiero de NVIDIA">
+                <p>El gráfico muestra el crecimiento anual de ingresos y beneficio neto de NVIDIA. El crecimiento explosivo refleja la fuerte demanda de sus productos, especialmente en el segmento de IA.</p>
+            </div>
+
+            <div class="chart-container">
+                <h3>Métricas de Rentabilidad</h3>
+                <img src="images/rentabilidad.png" alt="Métricas de rentabilidad de NVIDIA">
+                <p>El gráfico muestra las principales métricas de rentabilidad de NVIDIA. El margen de beneficio, ROE y ROA son significativamente superiores a la media del sector, demostrando la eficiencia operativa y la ventaja competitiva de la empresa.</p>
+            </div>
+
+            <div class="chart-container">
+                <h3>Ratios de Valoración</h3>
+                <img src="images/ratios_valoracion.png" alt="Ratios de valoración de NVIDIA">
+                <p>El gráfico muestra los principales ratios de valoración de NVIDIA. Los múltiplos elevados reflejan las expectativas de crecimiento futuro y la posición dominante de la empresa en mercados de alto crecimiento.</p>
+            </div>
+
+            <div class="advantages-list">
+                <h3>Ventajas Competitivas</h3>
+                <div class="advantage-item">
+                    <h3>Liderazgo en GPUs</h3>
+                    <p>NVIDIA es el líder indiscutible en el mercado de GPUs, con una cuota de mercado dominante en segmentos de alto rendimiento. Esto le permite establecer estándares de la industria y mantener márgenes superiores.</p>
+                </div>
+                <div class="advantage-item">
+                    <h3>Ecosistema CUDA</h3>
+                    <p>Su plataforma de computación paralela CUDA ha creado un ecosistema completo de desarrollo que genera altos costos de cambio. Esto crea una barrera de entrada significativa para competidores y fideliza a desarrolladores.</p>
+                </div>
+                <div class="advantage-item">
+                    <h3>Innovación en IA</h3>
+                    <p>NVIDIA ha posicionado sus GPUs como la infraestructura fundamental para el entrenamiento e inferencia de modelos de IA. Esto ha permitido a la empresa capitalizar el auge de la IA generativa y el aprendizaje profundo.</p>
+                </div>
+                <div class="advantage-item">
+                    <h3>Diversificación de mercados</h3>
+                    <p>Expansión exitosa desde gaming hacia centros de datos, automoción, edge computing y otros mercados de alto crecimiento. Esto reduce la dependencia de un solo segmento y amplía las oportunidades de crecimiento.</p>
+                </div>
+            </div>
+
+            <h3>Análisis Competitivo</h3>
+            <table class="competitors-table">
+                <thead>
+                    <tr>
+                        <th>Competidor</th>
+                        <th>Fortalezas</th>
+                        <th>Debilidades</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>AMD</strong></td>
+                        <td>Competidor directo en GPUs, con productos Radeon y arquitectura RDNA. Ofrece alternativas más económicas.</td>
+                        <td>Menor cuota de mercado en GPUs de alto rendimiento. Ecosistema de software menos desarrollado que CUDA.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Intel</strong></td>
+                        <td>Entrando en el mercado de GPUs discretas con Intel Arc. Enorme capacidad de fabricación y recursos de I+D.</td>
+                        <td>Nuevo en el mercado de GPUs discretas. Problemas con el desarrollo y lanzamiento de productos competitivos.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google (TPUs)</strong></td>
+                        <td>Desarrolla sus propios Tensor Processing Units (TPUs) optimizados para cargas de trabajo de IA.</td>
+                        <td>Principalmente para uso interno en sus servicios cloud, no disponibles ampliamente para el mercado.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Startups de chips de IA</strong></td>
+                        <td>Empresas como Cerebras, Graphcore y SambaNova desarrollan chips especializados para IA.</td>
+                        <td>Escala limitada, menor ecosistema de software y menor adopción en comparación con NVIDIA.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="valuation-section">
+                <h3>Análisis de Valoración</h3>
+                <p>Con un ratio P/E de 72.5, NVIDIA cotiza a una prima significativa respecto al mercado general y al sector tecnológico. Esta valoración refleja:</p>
+                <ul>
+                    <li>Expectativas de crecimiento excepcional impulsado por la demanda de IA</li>
+                    <li>Posición dominante en un mercado con altas barreras de entrada</li>
+                    <li>Márgenes superiores a la media del sector</li>
+                    <li>Historial probado de innovación y expansión a nuevos mercados</li>
+                </ul>
+                <p>Comparado con sus competidores directos, NVIDIA mantiene múltiplos de valoración más altos, justificados por su mayor crecimiento, mejores márgenes y posición de liderazgo en IA.</p>
+                <h4>Justificación de la Valoración</h4>
+                <p>La valoración actual de NVIDIA puede justificarse si:</p>
+                <ol>
+                    <li>Mantiene su dominio en el mercado de GPUs para IA y computación de alto rendimiento</li>
+                    <li>Continúa expandiendo sus márgenes a medida que escala su negocio de centros de datos</li>
+                    <li>Logra monetizar efectivamente nuevas oportunidades en mercados emergentes como edge AI y automoción</li>
+                    <li>El mercado de IA continúa creciendo a tasas aceleradas durante los próximos años</li>
+                </ol>
+                <p>Sin embargo, la valoración actual deja poco margen de error y asume una ejecución perfecta en un entorno competitivo cada vez más desafiante.</p>
+            </div>
+
+            <div class="conclusion-box">
+                <h3>Conclusiones del Análisis Fundamental</h3>
+                <p>NVIDIA presenta fundamentales excepcionalmente sólidos, caracterizados por:</p>
+                <ul>
+                    <li>Crecimiento explosivo de ingresos y beneficios</li>
+                    <li>Márgenes de beneficio extraordinarios</li>
+                    <li>Posición financiera robusta con efectivo neto positivo</li>
+                    <li>Ventajas competitivas sostenibles</li>
+                    <li>Liderazgo en mercados de alto crecimiento como IA y computación acelerada</li>
+                </ul>
+                <p>La empresa está bien posicionada para capitalizar tendencias tecnológicas a largo plazo, particularmente la adopción generalizada de IA en empresas y la creciente demanda de computación de alto rendimiento.</p>
+                <p>Sin embargo, los inversores deben considerar:</p>
+                <ul>
+                    <li>Valoración exigente que incorpora expectativas muy optimistas</li>
+                    <li>Riesgos de competencia creciente de AMD, Intel y chips de IA especializados</li>
+                    <li>Posible ciclicidad en la demanda de infraestructura de IA</li>
+                </ul>
+                <p>Desde una perspectiva fundamental, NVIDIA representa una empresa de calidad excepcional con un potencial de crecimiento significativo a largo plazo, aunque su valoración actual requiere un análisis cuidadoso del riesgo-recompensa para nuevas inversiones.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>¿Quieres conocer las tendencias de la industria?</h2>
+            <p>Continúa con nuestro análisis de la industria para entender el contexto del mercado</p>
+            <a href="industria.html" class="btn">Ver Análisis de la Industria</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Análisis de NVIDIA. Este análisis ha sido preparado con fines informativos y no constituye asesoramiento financiero.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

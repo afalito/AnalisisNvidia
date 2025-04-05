@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Técnico - Análisis de NVIDIA</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .chart-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .chart-container img {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .indicators-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .indicator-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .indicator-card h3 {
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--light-gray);
+            padding-bottom: 10px;
+        }
+        
+        .signal {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .signal-bullish {
+            background-color: rgba(76, 175, 80, 0.2);
+            color: #2e7d32;
+        }
+        
+        .signal-bearish {
+            background-color: rgba(244, 67, 54, 0.2);
+            color: #c62828;
+        }
+        
+        .signal-neutral {
+            background-color: rgba(255, 152, 0, 0.2);
+            color: #ef6c00;
+        }
+        
+        .conclusion-box {
+            background-color: var(--light-bg);
+            border-left: 5px solid var(--primary-color);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 10px 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/nvidia-logo.png" alt="NVIDIA Logo" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Nvidia_logo.svg/1280px-Nvidia_logo.svg.png'; this.onerror=null;">
+                <h1>Análisis de Inversión</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="rendimiento.html">Rendimiento</a></li>
+                    <li><a href="tecnico.html" class="active">Análisis Técnico</a></li>
+                    <li><a href="fundamental.html">Análisis Fundamental</a></li>
+                    <li><a href="industria.html">Industria</a></li>
+                    <li><a href="riesgos.html">Riesgos y Oportunidades</a></li>
+                    <li><a href="recomendacion.html">Recomendación</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Análisis Técnico</h2>
+            <p>Evaluación de indicadores técnicos, patrones de precio y señales de compra/venta para NVIDIA.</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="indicators-grid">
+                <div class="indicator-card">
+                    <h3>RSI (Relative Strength Index)</h3>
+                    <p>Valor actual: <strong>62.5</strong></p>
+                    <div class="signal signal-neutral">Neutral</div>
+                    <p>El RSI se encuentra en zona neutral, ni sobrecomprado ni sobrevendido, indicando equilibrio entre compradores y vendedores.</p>
+                </div>
+                <div class="indicator-card">
+                    <h3>MACD</h3>
+                    <p>MACD: <strong>2.45</strong> | Señal: <strong>1.87</strong></p>
+                    <div class="signal signal-bullish">Alcista</div>
+                    <p>El MACD se encuentra por encima de su línea de señal, lo que indica momentum alcista en el corto plazo.</p>
+                </div>
+                <div class="indicator-card">
+                    <h3>Bandas de Bollinger</h3>
+                    <p>Posición: <strong>Cerca de la banda superior</strong></p>
+                    <div class="signal signal-neutral">Precaución</div>
+                    <p>El precio se acerca a la banda superior, lo que podría indicar una condición de sobrecompra, pero en tendencias fuertes esto puede persistir.</p>
+                </div>
+                <div class="indicator-card">
+                    <h3>Medias Móviles</h3>
+                    <p>MA50: <strong>Por debajo del precio</strong> | MA200: <strong>Por debajo del precio</strong></p>
+                    <div class="signal signal-bullish">Alcista</div>
+                    <p>El precio se mantiene por encima de las medias móviles de 50 y 200 días, confirmando una tendencia alcista de fondo.</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h3>RSI (Relative Strength Index)</h3>
+                <img src="images/rsi.png" alt="RSI de NVIDIA">
+                <p>El gráfico muestra el RSI de NVIDIA. Las líneas horizontales en 70 y 30 marcan las zonas de sobrecompra y sobreventa respectivamente. El RSI actual se encuentra en zona neutral, sin señales extremas.</p>
+            </div>
+
+            <div class="chart-container">
+                <h3>MACD (Moving Average Convergence Divergence)</h3>
+                <img src="images/macd.png" alt="MACD de NVIDIA">
+                <p>El gráfico muestra el MACD de NVIDIA. La línea azul representa el MACD, la línea naranja es la señal, y las barras representan el histograma. Actualmente el MACD está por encima de su línea de señal, lo que es una señal alcista.</p>
+            </div>
+
+            <div class="chart-container">
+                <h3>Bandas de Bollinger</h3>
+                <img src="images/bollinger.png" alt="Bandas de Bollinger de NVIDIA">
+                <p>El gráfico muestra las Bandas de Bollinger de NVIDIA. El precio se encuentra cerca de la banda superior, lo que podría indicar una condición de sobrecompra, pero en tendencias fuertes esto puede persistir durante periodos prolongados.</p>
+            </div>
+
+            <div class="chart-container">
+                <h3>Stochastic Oscillator</h3>
+                <img src="images/stochastic.png" alt="Stochastic Oscillator de NVIDIA">
+                <p>El gráfico muestra el Stochastic Oscillator de NVIDIA. Las líneas horizontales en 80 y 20 marcan las zonas de sobrecompra y sobreventa respectivamente. Actualmente el oscilador muestra señales mixtas.</p>
+            </div>
+
+            <div class="chart-container">
+                <h3>ADX (Average Directional Index)</h3>
+                <img src="images/adx.png" alt="ADX de NVIDIA">
+                <p>El gráfico muestra el ADX de NVIDIA junto con los indicadores direccionales DI+ y DI-. Un ADX por encima de 25 indica una tendencia fuerte, mientras que la relación entre DI+ y DI- indica la dirección de la tendencia.</p>
+            </div>
+
+            <div class="conclusion-box">
+                <h3>Conclusión del Análisis Técnico</h3>
+                <p>El análisis técnico de NVIDIA muestra una señal general <strong>alcista</strong> basada en los indicadores evaluados:</p>
+                <ul>
+                    <li>La tendencia a largo plazo es claramente alcista, con el precio por encima de las medias móviles de 50 y 200 días.</li>
+                    <li>El MACD muestra momentum alcista en el corto plazo.</li>
+                    <li>El RSI se encuentra en zona neutral, sin señales de sobrecompra extrema que pudieran anticipar una corrección inmediata.</li>
+                    <li>Las Bandas de Bollinger muestran que el precio se acerca a la banda superior, lo que sugiere precaución pero no necesariamente un cambio de tendencia.</li>
+                    <li>El ADX indica una tendencia fuerte con predominio de la presión compradora (DI+ > DI-).</li>
+                </ul>
+                <p>Desde una perspectiva técnica, NVIDIA mantiene una estructura alcista sólida, aunque los inversores deben estar atentos a posibles señales de agotamiento a corto plazo debido a la proximidad a zonas de resistencia y a la banda superior de Bollinger.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>¿Quieres conocer los fundamentos de la empresa?</h2>
+            <p>Continúa con nuestro análisis fundamental para evaluar la salud financiera y ventajas competitivas</p>
+            <a href="fundamental.html" class="btn">Ver Análisis Fundamental</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Análisis de NVIDIA. Este análisis ha sido preparado con fines informativos y no constituye asesoramiento financiero.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

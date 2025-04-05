@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riesgos y Oportunidades - Análisis de NVIDIA</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .risk-opportunity-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .matrix-container {
+            margin: 30px 0;
+        }
+        
+        .matrix-container img {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .risk-grid, .opportunity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .risk-card, .opportunity-card {
+            background-color: var(--light-bg);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .risk-card h4, .opportunity-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            border-bottom: 1px solid var(--light-gray);
+            padding-bottom: 10px;
+        }
+        
+        .risk-card {
+            border-left: 5px solid #f44336;
+        }
+        
+        .opportunity-card {
+            border-left: 5px solid #4caf50;
+        }
+        
+        .risk-level, .opportunity-level {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .risk-high {
+            background-color: rgba(244, 67, 54, 0.2);
+            color: #c62828;
+        }
+        
+        .risk-medium {
+            background-color: rgba(255, 152, 0, 0.2);
+            color: #ef6c00;
+        }
+        
+        .risk-low {
+            background-color: rgba(255, 193, 7, 0.2);
+            color: #ff8f00;
+        }
+        
+        .opportunity-high {
+            background-color: rgba(76, 175, 80, 0.2);
+            color: #2e7d32;
+        }
+        
+        .opportunity-medium {
+            background-color: rgba(33, 150, 243, 0.2);
+            color: #1565c0;
+        }
+        
+        .opportunity-low {
+            background-color: rgba(156, 39, 176, 0.2);
+            color: #7b1fa2;
+        }
+        
+        .swot-container {
+            margin: 30px 0;
+        }
+        
+        .swot-container img {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .risk-reward {
+            background-color: var(--light-bg);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .risk-reward-scale {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            position: relative;
+            height: 60px;
+        }
+        
+        .risk-reward-scale:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, #f44336, #ff9800, #4caf50);
+            transform: translateY(-50%);
+            border-radius: 2px;
+        }
+        
+        .risk-reward-marker {
+            position: absolute;
+            top: 0;
+            left: 53%;
+            width: 20px;
+            height: 60px;
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            transform: translateX(-50%);
+        }
+        
+        .risk-reward-marker:after {
+            content: 'NVIDIA';
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .risk-reward-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .risk-reward-label {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .risk-reward-label h4 {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/nvidia-logo.png" alt="NVIDIA Logo" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Nvidia_logo.svg/1280px-Nvidia_logo.svg.png'; this.onerror=null;">
+                <h1>Análisis de Inversión</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="rendimiento.html">Rendimiento</a></li>
+                    <li><a href="tecnico.html">Análisis Técnico</a></li>
+                    <li><a href="fundamental.html">Análisis Fundamental</a></li>
+                    <li><a href="industria.html">Industria</a></li>
+                    <li><a href="riesgos.html" class="active">Riesgos y Oportunidades</a></li>
+                    <li><a href="recomendacion.html">Recomendación</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Riesgos y Oportunidades</h2>
+            <p>Evaluación detallada de los riesgos y oportunidades para la inversión en NVIDIA.</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="risk-opportunity-section">
+                <h3>Resumen Ejecutivo</h3>
+                <p>Este análisis evalúa los principales riesgos y oportunidades asociados con una inversión en NVIDIA Corporation. La evaluación se basa en el análisis técnico, fundamental y de la industria realizado previamente, y tiene como objetivo proporcionar una visión equilibrada para la toma de decisiones de inversión.</p>
+                
+                <div class="risk-reward">
+                    <h3>Evaluación de Riesgo-Recompensa</h3>
+                    <div class="risk-reward-scale">
+                        <div class="risk-reward-marker"></div>
+                    </div>
+                    <div class="risk-reward-labels">
+                        <div class="risk-reward-label">
+                            <h4>Alto Riesgo</h4>
+                            <p>Baja Recompensa</p>
+                        </div>
+                        <div class="risk-reward-label">
+                            <h4>Riesgo Moderado</h4>
+                            <p>Recompensa Moderada</p>
+                        </div>
+                        <div class="risk-reward-label">
+                            <h4>Bajo Riesgo</h4>
+                            <p>Alta Recompensa</p>
+                        </div>
+                    </div>
+                    <p>Considerando tanto los riesgos como las oportunidades identificadas, la relación riesgo-recompensa para una inversión en NVIDIA puede evaluarse como <strong>favorable para inversores con horizonte a largo plazo y tolerancia a la volatilidad</strong>.</p>
+                </div>
+            </div>
+            
+            <div class="risk-opportunity-section">
+                <h3>Análisis de Riesgos</h3>
+                
+                <div class="matrix-container">
+                    <h4>Matriz de Riesgos</h4>
+                    <img src="images/matriz_riesgos.png" alt="Matriz de Riesgos para NVIDIA">
+                    <p>La matriz de riesgos evalúa los principales factores de riesgo para una inversión en NVIDIA según su impacto potencial y probabilidad de ocurrencia.</p>
+                </div>
+                
+                <div class="risk-grid">
+                    <div class="risk-card">
+                        <h4>Competencia creciente</h4>
+                        <div class="risk-level risk-medium">Riesgo Moderado-Alto</div>
+                        <p><strong>Descripción:</strong> Aumento de la competencia de AMD, Intel y startups de IA.</p>
+                        <p><strong>Impacto:</strong> 7/10</p>
+                        <p><strong>Probabilidad:</strong> 6/10</p>
+                        <p><strong>Estrategia de mitigación:</strong> NVIDIA mantiene ventaja tecnológica y ecosistema CUDA.</p>
+                    </div>
+                    
+                    <div class="risk-card">
+                        <h4>Valoración elevada</h4>
+                        <div class="risk-level risk-high">Riesgo Alto</div>
+                        <p><strong>Descripción:</strong> Múltiplos de valoración muy por encima de la media histórica y del sector.</p>
+                        <p><strong>Impacto:</strong> 8/10</p>
+                        <p><strong>Probabilidad:</strong> 7/10</p>
+                        <p><strong>Estrategia de mitigación:</strong> Crecimiento acelerado podría justificar valoraciones altas.</p>
+                    </div>
+                    
+                    <div class="risk-card">
+                        <h4>Dependencia del mercado de IA</h4>
+                        <div class="risk-level risk-high">Riesgo Alto</div>
+                        <p><strong>Descripción:</strong> Alta exposición al crecimiento del mercado de IA generativa.</p>
+                        <p><strong>Impacto:</strong> 9/10</p>
+                        <p><strong>Probabilidad:</strong> 5/10</p>
+                        <p><strong>Estrategia de mitigación:</strong> Diversificación hacia otros mercados como automoción y edge computing.</p>
+                    </div>
+                    
+                    <div class="risk-card">
+                        <h4>Restricciones comerciales</h4>
+                        <div class="risk-level risk-medium">Riesgo Moderado-Alto</div>
+                        <p><strong>Descripción:</strong> Impacto de restricciones a la exportación de chips avanzados a China.</p>
+                        <p><strong>Impacto:</strong> 6/10</p>
+                        <p><strong>Probabilidad:</strong> 8/10</p>
+                        <p><strong>Estrategia de mitigación:</strong> Expansión en otros mercados geográficos y adaptación de productos.</p>
+                    </div>
+                </div>
+                
+                <h4>Evaluación General de Riesgos</h4>
+                <p>El análisis de la matriz de riesgos muestra que los riesgos más significativos para una inversión en NVIDIA son:</p>
+                <ol>
+                    <li><strong>Dependencia del mercado de IA:</strong> El crecimiento de NVIDIA está fuertemente vinculado a la expansión del mercado de IA generativa. Cualquier desaceleración en la adopción de IA o en las inversiones en infraestructura de IA podría afectar negativamente a la empresa.</li>
+                    <li><strong>Valoración elevada:</strong> Las acciones de NVIDIA cotizan con múltiplos significativamente superiores a la media histórica y del sector, lo que podría limitar el potencial de revalorización y aumentar la volatilidad.</li>
+                    <li><strong>Competencia de chips personalizados:</strong> Grandes empresas tecnológicas como Google, Microsoft y Amazon están desarrollando sus propios chips de IA, lo que podría reducir su dependencia de NVIDIA a largo plazo.</li>
+                    <li><strong>Restricciones comerciales:</strong> Las tensiones geopolíticas y las restricciones a la exportación de tecnología avanzada a China representan un riesgo para el acceso de NVIDIA a uno de los mercados más grandes del mundo.</li>
+                </ol>
+                <p>Estos riesgos deben ser considerados cuidadosamente, especialmente por inversores con baja tolerancia al riesgo o horizontes de inversión a corto plazo.</p>
+            </div>
+            
+            <div class="risk-opportunity-section">
+                <h3>Análisis de Oportunidades</h3>
+                
+                <div class="matrix-container">
+                    <h4>Matriz de Oportunidades</h4>
+                    <img src="images/matriz_oportunidades.png" alt="Matriz de Oportunidades para NVIDIA">
+                    <p>La matriz de oportunidades evalúa las principales oportunidades para NVIDIA según su potencial de impacto y probabilidad de materialización.</p>
+                </div>
+                
+                <div class="opportunity-grid">
+                    <div class="opportunity-card">
+                        <h4>Expansión del mercado de IA</h4>
+                        <div class="opportunity-level opportunity-high">Oportunidad Alta</div>
+                        <p><strong>Descripción:</strong> Crecimiento acelerado de la demanda de infraestructura para IA generativa.</p>
+                        <p><strong>Potencial:</strong> 9/10</p>
+                        <p><strong>Probabilidad:</strong> 9/10</p>
+                        <p><strong>Estrategia de aprovechamiento:</strong> Continuar innovando en arquitecturas de GPU optimizadas para IA.</p>
+                    </div>
+                    
+                    <div class="opportunity-card">
+                        <h4>Arquitectura Blackwell</h4>
+                        <div class="opportunity-level opportunity-high">Oportunidad Alta</div>
+                        <p><strong>Descripción:</strong> Nueva generación de GPUs con mayor rendimiento y eficiencia energética.</p>
+                        <p><strong>Potencial:</strong> 8/10</p>
+                        <p><strong>Probabilidad:</strong> 9/10</p>
+                        <p><strong>Estrategia de aprovechamiento:</strong> Capitalizar la ventaja tecnológica sobre competidores.</p>
+                    </div>
+                    
+                    <div class="opportunity-card">
+                        <h4>Expansión en edge computing</h4>
+                        <div class="opportunity-level opportunity-high">Oportunidad Alta</div>
+                        <p><strong>Descripción:</strong> Crecimiento del mercado de IA en dispositivos edge y IoT.</p>
+                        <p><strong>Potencial:</strong> 7/10</p>
+                        <p><strong>Probabilidad:</strong> 8/10</p>
+                        <p><strong>Estrategia de aprovechamiento:</strong> Desarrollar soluciones específicas para computación en el borde.</p>
+                    </div>
+                    
+                    <div class="opportunity-card">
+                        <h4>Sector automotriz</h4>
+                        <div class="opportunity-level opportunity-medium">Oportunidad Media-Alta</div>
+                        <p><strong>Descripción:</strong> Aumento de la demanda de chips para vehículos autónomos y ADAS.</p>
+                        <p><strong>Potencial:</strong> 8/10</p>
+                        <p><strong>Probabilidad:</strong> 7/10</p>
+                        <p><strong>Estrategia de aprovechamiento:</strong> Fortalecer alianzas con fabricantes de automóviles.</p>
+                    </div>
+                </div>
+                
+                <h4>Evaluación General de Oportunidades</h4>
+                <p>El análisis de la matriz de oportunidades muestra que las oportunidades más prometedoras para NVIDIA son:</p>
+                <ol>
+                    <li><strong>Expansión del mercado de IA:</strong> El mercado de chips para IA se espera que crezca a más de $150 mil millones en 2025, representando más del 20% del mercado total de semiconductores. NVIDIA está excepcionalmente bien posicionada para capitalizar este crecimiento.</li>
+                    <li><strong>Arquitectura Blackwell:</strong> La nueva generación de GPUs de NVIDIA ofrece mejoras significativas en rendimiento y eficiencia energética, fortaleciendo su ventaja competitiva en el mercado de IA.</li>
+                    <li><strong>Servicios en la nube:</strong> La creciente demanda de servicios de IA en la nube representa una oportunidad significativa para NVIDIA, tanto a través de ventas directas de hardware como de posibles expansiones en servicios.</li>
+                    <li><strong>Expansión en edge computing:</strong> A medida que la IA se mueve hacia dispositivos edge, NVIDIA tiene la oportunidad de expandir su presencia en este mercado emergente.</li>
+                </ol>
+                <p>Estas oportunidades ofrecen un potencial de crecimiento significativo para NVIDIA en los próximos años, respaldando la tesis de inversión a largo plazo.</p>
+            </div>
+            
+            <div class="risk-opportunity-section">
+                <h3>Análisis DAFO (SWOT)</h3>
+                
+                <div class="swot-container">
+                    <img src="images/analisis_dafo.png" alt="Análisis DAFO de NVIDIA">
+                </div>
+                
+                <div class="swot-details">
+                    <h4>Fortalezas</h4>
+                    <ul>
+                        <li>Liderazgo indiscutible en GPUs para IA y computación de alto rendimiento</li>
+                        <li>Ecosistema CUDA que crea altos costos de cambio para los desarrolladores</li>
+                        <li>Márgenes de beneficio superiores a la media del sector</li>
+                        <li>Posición financiera sólida con efectivo neto positivo</li>
+                        <li>Fuerte capacidad de innovación y anticipación a tendencias tecnológicas</li>
+                    </ul>
+                    
+                    <h4>Debilidades</h4>
+                    <ul>
+                        <li>Valoración bursátil exigente con múltiplos elevados</li>
+                        <li>Alta dependencia del crecimiento continuo del mercado de IA</li>
+                        <li>Exposición a restricciones comerciales y tensiones geopolíticas</li>
+                        <li>Dependencia de TSMC para la fabricación de chips</li>
+                        <li>Competencia creciente de AMD, Intel y chips personalizados</li>
+                    </ul>
+                    
+                    <h4>Oportunidades</h4>
+                    <ul>
+                        <li>Crecimiento acelerado del mercado de infraestructura para IA</li>
+                        <li>Expansión en mercados emergentes como edge computing e IoT</li>
+                        <li>Creciente demanda en el sector automotriz para vehículos autónomos</li>
+                        <li>Desarrollo de aplicaciones de metaverso y realidad virtual</li>
+                        <li>Expansión de servicios en la nube basados en hardware NVIDIA</li>
+                    </ul>
+                    
+                    <h4>Amenazas</h4>
+                    <ul>
+                        <li>Desarrollo de chips de IA personalizados por grandes empresas tecnológicas</li>
+                        <li>Avances tecnológicos de competidores como AMD e Intel</li>
+                        <li>Ciclicidad inherente a la industria de semiconductores</li>
+                        <li>Posibles regulaciones restrictivas en el desarrollo y uso de IA</li>
+                        <li>Tensiones geopolíticas que afectan a cadenas de suministro globales</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="conclusion-box">
+                <h3>Conclusiones y Recomendaciones</h3>
+                
+                <h4>Para Inversores a Largo Plazo</h4>
+                <p>NVIDIA presenta una oportunidad de inversión atractiva para inversores con horizonte a largo plazo (3-5 años o más) y tolerancia a la volatilidad. La empresa está excepcionalmente bien posicionada para beneficiarse de tendencias tecnológicas a largo plazo, particularmente la adopción generalizada de IA en empresas y la creciente demanda de computación de alto rendimiento.</p>
+                
+                <h4>Para Inversores a Corto/Medio Plazo</h4>
+                <p>Los inversores con horizontes más cortos deben ser cautelosos debido a la valoración elevada y la posibilidad de volatilidad a corto plazo. Considerar estrategias de entrada escalonadas para mitigar el riesgo de timing.</p>
+                
+                <h4>Estrategias de Mitigación de Riesgos</h4>
+                <ul>
+                    <li><strong>Diversificación:</strong> Limitar la exposición a NVIDIA a un porcentaje apropiado de la cartera total.</li>
+                    <li><strong>Entrada escalonada:</strong> Considerar la compra de acciones en múltiples puntos para promediar el precio de entrada.</li>
+                    <li><strong>Horizonte a largo plazo:</strong> Adoptar una perspectiva de inversión a largo plazo para superar la volatilidad a corto plazo.</li>
+                    <li><strong>Seguimiento continuo:</strong> Monitorear regularmente los desarrollos en el mercado de IA y la posición competitiva de NVIDIA.</li>
+                </ul>
+                
+                <h4>Factores a Vigilar</h4>
+                <ul>
+                    <li>Evolución de la demanda de infraestructura para IA generativa</li>
+                    <li>Avances de competidores en tecnología de chips para IA</li>
+                    <li>Desarrollo de chips personalizados por grandes empresas tecnológicas</li>
+                    <li>Cambios en restricciones comerciales y regulaciones de IA</li>
+                    <li>Capacidad de NVIDIA para mantener sus márgenes y cuota de mercado</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>¿Listo para tomar una decisión informada?</h2>
+            <p>Revisa nuestra recomendación final basada en todo el análisis realizado</p>
+            <a href="recomendacion.html" class="btn">Ver Recomendación Final</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Análisis de NVIDIA. Este análisis ha sido preparado con fines informativos y no constituye asesoramiento financiero.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
