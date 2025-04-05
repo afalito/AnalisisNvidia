@@ -1,0 +1,176 @@
+/* Estilos adicionales para mejorar la responsividad */
+@media (max-width: 992px) {
+    .container {
+        width: 95%;
+    }
+    
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+    
+    .sections-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .key-points ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .financials-grid, 
+    .indicators-grid, 
+    .risk-grid, 
+    .opportunity-grid,
+    .investor-profiles {
+        grid-template-columns: 1fr;
+    }
+    
+    .market-position {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    
+    nav ul li {
+        margin: 5px 10px;
+    }
+    
+    .hero {
+        padding: 80px 0;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .recommendation h3 {
+        font-size: 1.5rem;
+    }
+    
+    .key-metrics {
+        flex-direction: column;
+    }
+    
+    .metric {
+        margin-bottom: 15px;
+    }
+    
+    .chart-container {
+        padding: 15px;
+    }
+    
+    .page-header h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 40px 0;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .recommendation-box .buy {
+        font-size: 2rem;
+    }
+    
+    .recommendation-box .subtitle {
+        font-size: 1rem;
+    }
+    
+    .risk-reward-labels {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .risk-reward-label {
+        margin-bottom: 10px;
+    }
+}
+
+/* Mejoras para dispositivos táctiles */
+@media (hover: none) {
+    .btn:hover, 
+    .btn-secondary:hover,
+    nav ul li a:hover:after {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .btn:active, 
+    .btn-secondary:active {
+        transform: scale(0.98);
+    }
+    
+    .section-card:hover {
+        transform: none;
+    }
+    
+    .section-card:active {
+        transform: translateY(-5px);
+    }
+}
+
+/* Optimizaciones para impresión */
+@media print {
+    header, 
+    footer, 
+    .cta,
+    .btn,
+    .btn-secondary {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: #fff;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+    
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+    
+    .recommendation-box,
+    .risk-card,
+    .opportunity-card,
+    .chart-container,
+    .conclusion-box {
+        break-inside: avoid;
+    }
+}
